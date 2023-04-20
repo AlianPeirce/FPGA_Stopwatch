@@ -1,9 +1,15 @@
 <h1 align="center">FPGA Stopwatch</h1>
 
+<p align="center">
+  <a href="#about">About</a> &nbsp;&nbsp;•&nbsp;&nbsp; 
+  <a href="#circuit-design">Circuit design</a>
+</p>
 
 <p align="center">
     <img src="https://user-images.githubusercontent.com/110432500/233398339-0f5bbb6b-e43a-4e2b-a883-d7914d275d62.gif" alt="Quick demonstration of the stopwatch" width=300 />
 <p align="center">
+
+## About
 
 In this project, a standard stopwatch was created using an FPGA — more specifically, the <a href="https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=921">DE0-CV FPGA Board</a>. When the user flips a specific switch, the stopwatch begins to count the number of minutes and seconds elapsed; these values are represented on the board's seven-segment display using decimal (base ten) numbers. Though this display choice is a more complex approach than the standard binary-coded decimal (BCD) display, it is much more understandable and easy to read for the common user.
 
@@ -14,7 +20,11 @@ In simpler terms: if you flip the switch on, the stopwatch starts. If you flip t
     
 ## Circuit design
 
-The stopwatch was implemented using two embellished counter circuits. Using code from a previous lab project (Figure 0), Counter Circuit #1 (Figure 1) was set to have an interval of exactly one second between increments. This is the circuit that counts the seconds that elapse. On the contrary, Counter Circuit #2 (Figure 2) was set to have an interval of exactly one minute between increments; this was achieved by setting Counter #1 to send an incrementation signal to Counter #2 every time Counter #1 reached 60 seconds. Thus, Counter #2 keeps track of how many minutes have elapsed.
+The stopwatch was implemented using two embellished counter circuits that were connected to become a larger circuit.
+
+Using code from a previous lab project (**Figure 0**), Counter Circuit #1 (**Figure 1**) was set to have an interval of exactly one second between increments. This is the circuit that counts the seconds that elapse. This counter continuously checks if it has reached 60 seconds; if so, an incrementation signal is sent to Counter #2 (in order to tell Counter #2 to increment by one minute), and Counter #1 resets back to 0 seconds.
+
+On the other hand, Counter Circuit #2 (**Figure 2**) was set to have an interval of exactly one minute between increments; as previously stated, this was achieved by setting Counter #1 to send an incrementation signal to Counter #2 every time Counter #1 reaches 60 seconds; this triggers Counter #2 to increment by 1. Thus, Counter #2 keeps track of how many minutes have elapsed.
 
 &nbsp;
 
@@ -40,7 +50,3 @@ The stopwatch was implemented using two embellished counter circuits. Using code
     <b>Figure 2: </b>
     Counter circuit #2 – counts by minutes
 </p>
-    
-
-    
-    
