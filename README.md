@@ -2,7 +2,8 @@
 
 <p align="center">
   <a href="#about">About</a> &nbsp;&nbsp;•&nbsp;&nbsp; 
-  <a href="#circuit-design">Circuit design</a>
+  <a href="#circuit-design">Circuit design</a> &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="#notes">Notes</a>
 </p>
 
 <p align="center">
@@ -50,3 +51,6 @@ On the other hand, Counter Circuit #2 (**Figure 2**) was set to have an interval
     <b>Figure 2: </b>
     Counter circuit #2 – counts by minutes
 </p>
+
+## Notes
+The circuit was designed using the FPGA design software [Intel Quartus Prime](https://www.intel.com/content/www/us/en/products/details/fpga/development-tools/quartus-prime.html). If you would like to view or alter the circuit schematics, feel free to import the ZIP file in this repository into Quartus.
