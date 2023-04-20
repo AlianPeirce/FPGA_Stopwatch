@@ -7,7 +7,7 @@
 
 In this project, a standard stopwatch was created using an FPGA — more specifically, the <a href="https://www.terasic.com.tw/cgi-bin/page/archive.pl?Language=English&No=921">DE0-CV FPGA Board</a>. When the user flips a specific switch, the stopwatch begins to count the number of minutes and seconds elapsed; these values are represented on the board's seven-segment display using decimal (base ten) numbers. Though this display choice is a more complex approach than the standard binary-coded decimal (BCD) display, it is much more understandable and easy to read for the common user.
     
-If the switch is flipped back to its original position by the user, the stopwatch pauses and the display freezes accordingly, thus keeping note of the time that was on the stopwatch when it was paused. The stopwatch will remain paused until the user flips the switch back into the "on" setting, at which point the stopwatch will continue counting from where it left off.
+If the switch is flipped back to its original position by the user, the stopwatch pauses and the display freezes accordingly, thus retaining the time that was on the stopwatch when it was paused. The stopwatch will remain paused until the user flips the switch back into the "on" setting, at which point the stopwatch will continue counting from where it left off.
     
 ## Circuit design
 
